@@ -1,0 +1,127 @@
+<!-- GTAV VEHICLES.META GUIDE WITH DESCRIPTIONS -->
+<!-- DO NOT USE THIS. PLEASE READ IT INSTEAD -->
+
+<Item>
+  <modelName>car</modelName>                                                                   <!-- Name of the .yft model. -->
+  <txdName>car</txdName>                                                                       <!-- Name of the ytd texture directory. -->
+  <handlingId>car</handlingId>                                                                 <!-- Name of the handling or custom. -->
+  <gameName>car</gameName>                                                                     <!-- Name of the vehicle. -->
+  <vehicleMakeName>Viper Customs</vehicleMakeName>                                             <!-- Vehicle Manufacturer Name -->
+  <expressionDictName>null</expressionDictName>
+  <expressionName>null</expressionName>
+  <animConvRoofDictName>null</animConvRoofDictName>                                            <!-- Name of Convertible roof .ycd -->
+  <animConvRoofName>null</animConvRoofName>                                                    <!-- Name of Convertible vehicles' roof opening animation -->
+  <animConvRoofWindowsAffected />                                                              <!-- Windows affected by convertible animation -->
+  <ptfxAssetName>null</ptfxAssetName>
+  <audioNameHash>elegy2</audioNameHash>                                                        <!-- Name of audio hash for vehicles soundpack -->
+  <layout>LAYOUT_STANDARD</layout>                                                             <!-- Name of the vehicles layout defined in vehiclelayouts.meta -->
+  <coverBoundOffsets>POLICE_COVER_OFFSET_INFO</coverBoundOffsets>
+  <explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>                                        <!-- Defines the vehicles ability to explode upon damage -->
+  <scenarioLayout />
+  <cameraName>DEFAULT_FOLLOW_VEHICLE_CAMERA</cameraName>
+  <aimCameraName>DEFAULT_THIRD_PERSON_VEHICLE_AIM_CAMERA</aimCameraName>
+  <bonnetCameraName>VEHICLE_BONNET_CAMERA_MID_HIGH</bonnetCameraName>                          <!-- Determines the position of the drive camera -->
+  <povCameraName>DEFAULT_POV_CAMERA</povCameraName>
+  <FirstPersonDriveByIKOffset x="0.000000" y="-0.060000" z="-0.060000" />                       <!-- Inverses Kinematic offsets in First person -->
+  <FirstPersonDriveByUnarmedIKOffset x="0.000000" y="-0.050000" z="-0.020000" />                <!--                                            -->
+  <FirstPersonProjectileDriveByIKOffset x="0.000000" y="-0.075000" z="-0.045000" />             <!--                                            -->
+  <FirstPersonProjectileDriveByPassengerIKOffset x="0.000000" y="-0.075000" z="-0.045000" />    <!--                                            -->
+  <FirstPersonDriveByLeftPassengerIKOffset x="0.000000" y="0.000000" z="0.000000" />            <!--              Use These Values              -->
+  <FirstPersonDriveByRightPassengerIKOffset x="0.000000" y="-0.060000" z="-0.060000" />         <!--             To Define Position             -->
+  <FirstPersonDriveByLeftPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000" />     <!--               Of 3rd Person                -->
+  <FirstPersonDriveByRightPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000" />    <!--                   Camera                   -->
+  <FirstPersonMobilePhoneOffset x="0.125000" y="0.293000" z="0.516000" />                       <!--                                            -->
+  <FirstPersonPassengerMobilePhoneOffset x="0.136000" y="0.223000" z="0.415000" />              <!--                                            -->
+  <FirstPersonMobilePhoneSeatIKOffset>                                                          <!--                                            -->
+    <Item>
+      <Offset x="0.136000" y="0.146000" z="0.435000" />
+      <SeatIndex value="2" />
+    </Item>
+    <Item>
+      <Offset x="0.136000" y="0.146000" z="0.435000" />
+      <SeatIndex value="3" />
+    </Item>
+  </FirstPersonMobilePhoneSeatIKOffset>
+  <PovCameraOffset x="0.000000" y="-0.140000" z="0.650000" />                                  <!-- Adjusts the first person camera position -->
+  <PovCameraVerticalAdjustmentForRollCage value="0.000000" />
+  <PovPassengerCameraOffset x="0.000000" y="0.000000" z="0.000000" />
+  <vfxInfoName>VFXVEHICLEINFO_CAR_GENERIC</vfxInfoName>
+  <shouldUseCinematicViewMode value="true" />
+  <shouldCameraTransitionOnClimbUpDown value="false" />
+  <shouldCameraIgnoreExiting value="false" />
+  <AllowPretendOccupants value="true" />
+  <AllowJoyriding value="false" />                                                             <!-- True/False allows 'fake peds' as passengers -->
+  <AllowSundayDriving value="false" />                                                         <!-- True/False allows peds to steal the car -->
+  <AllowBodyColorMapping value="true" />                                                       <!-- True/False allows color change in mech menu -->
+  <wheelScale value="0.236900" />                                                              <!-- Scale of front wheel defined in .yft -->
+  <wheelScaleRear value="0.236900" />                                                          <!-- Scale of rear wheel defined in .yft -->
+  <dirtLevelMin value="0.000000" />                                                            <!-- Defines the minimum dirt shown when clean -->
+  <dirtLevelMax value="0.300000" />                                                            <!-- Defines the Maximum dirt shown when driving offroad -->
+  <envEffScaleMin value="0.000000" />
+  <envEffScaleMax value="1.000000" />
+  <envEffScaleMin2 value="0.000000" />
+  <envEffScaleMax2 value="1.000000" />
+  <damageMapScale value="0.600000" />
+  <damageOffsetScale value="1.000000" />
+  <diffuseTint value="0x00FFFFFF" />
+  <steerWheelMult value="1.000000" />
+  <HDTextureDist value="5.000000" />
+  <lodDistances content="float_array">                                                         <!-- Defines the vehicles distances LODs are visible at -->
+    10.000000                                                                                  <!-- Default native LOD parameters (Ln70-75) --> 
+    25.000000
+    60.000000
+    120.000000
+    500.000000
+    500.000000
+  </lodDistances>
+  <minSeatHeight value="0.839" />
+  <identicalModelSpawnDistance value="20" />
+  <maxNumOfSameColor value="10" />                                                             <!-- Defines how many versions in the same color that can spawn in cargen. Based off carvariations.meta -->
+  <defaultBodyHealth value="1000.000000" />                                                    <!-- Determines how much health the vehicle has maximum -->
+  <pretendOccupantsScale value="1.000000" />
+  <visibleSpawnDistScale value="1.000000" />
+  <trackerPathWidth value="2.000000" />
+  <weaponForceMult value="1.000000" />
+  <frequency value="60" />                                                                     <!-- Percentage likelyhood of car spawning in certain areas in cargen. (keep below 65%) -->
+  <swankness>SWANKNESS_1</swankness>                                                           <!-- Likelyhood value of ped comments from 1 to 5 -->
+  <maxNum value="2" />                                                                         <!-- Maximum number of cars that can spawn in a certain area in cargen -->
+  <flags>FLAG_INCREASE_CAMBER_WITH_SUSPENSION_MOD FLAG_DROP_SUSPENSION_WHEN_STOPPED</flags>    <!-- Different type of flags the vehicle has. Check the flags section of the Google Doc -->
+  <type>VEHICLE_TYPE_CAR</type>                                                                <!-- Defines the vehicles native 'class' also determines trunk space -->
+  <plateType>VPT_FRONT_AND_BACK_PLATES</plateType>                                             <!-- Determines whether the vehicle has plates and where they're mounted. -->
+  <dashboardType>VDT_GENTAXI</dashboardType>                                                   <!-- Defines the dashboard type. -->
+  <vehicleClass>VC_EMERGENCY</vehicleClass>                                                    <!-- Vehicle Class -->
+  <wheelType>VWT_MUSCLE</wheelType>                                                            <!-- Defines the type of wheel the vehicle uses by default -->
+  <trailers />                                                                                 <!-- If the vehicle has a hitch, you can use this to assign trailers -->
+  <additionalTrailers />                                                                       <!-- If the vehicle has a hitch, you can use this to assign trailers -->
+  <drivers>                                                                                    <!-- Defines ped model name that is able to drive the vehicle -->
+    <Item>
+      <driverName>S_M_Y_Cop_01</driverName>
+        <npcName />
+    </Item>
+  </drivers>
+  <extraIncludes />
+  <doorsWithCollisionWhenClosed />
+  <driveableDoors />
+  <bumpersNeedToCollideWithMap value="false" />
+  <needsRopeTexture value="false" />                                                           <!-- Used only on aircraft with Rappel -->
+  <requiredExtras />                                                                           <!-- use this if you want to force a extra on -->
+  <rewards>                                                                                    <!-- Reward the player with something when entering the vehicle, defined in pickups.meta -->
+    <Item>REWARD_WEAPON_PUMPSHOTGUN</Item>
+    <Item>REWARD_AMMO_PUMPSHOTGUN_ENTER_VEHICLE</Item>
+    <Item>REWARD_STAT_WEAPON</Item>
+  </rewards>
+  <cinematicPartCamera>                                                                        <!-- Defines the angles used by the cinematic view -->
+    <Item>WHEEL_FRONT_RIGHT_CAMERA</Item>
+    <Item>WHEEL_FRONT_LEFT_CAMERA</Item>
+    <Item>WHEEL_REAR_RIGHT_CAMERA</Item>
+    <Item>WHEEL_REAR_LEFT_CAMERA</Item>
+  </cinematicPartCamera>
+  <NmBraceOverrideSet />
+  <buoyancySphereOffset x="0.000000" y="0.000000" z="0.000000" />
+  <buoyancySphereSizeScale value="1.000000" />
+  <pOverrideRagdollThreshold type="NULL" />                                                    <!-- Only used for [rhino] and [dozer] no clue what it do -->
+  <firstPersonDrivebyData>
+    <Item>STD_POLICE_FRONT_LEFT</Item>
+    <Item>STD_POLICE_FRONT_RIGHT</Item>
+  </firstPersonDrivebyData>
+</Item>
