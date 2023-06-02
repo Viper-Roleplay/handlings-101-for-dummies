@@ -1,0 +1,88 @@
+<!-- GTAV HANDLING.META GUIDE WITH DESCRIPTIONS -->
+<!-- DO NOT USE THIS. PLEASE READ IT INSTEAD -->
+
+<!-- Documented -->
+  <Item type="CHandlingData">
+    <handlingName>VehicleSpawncode</handlingName>
+
+    <!-- Chassis and body characteristics -->
+        <fMass value="1700.000000"/>                                    <!-- For entity vs entity colissions -->
+        <fInitialDragCoeff value="8.000000"/>                           <!-- Air drag, scales up with speed. Enough air drag can overpower the engine at high speeds -->
+        <fPercentSubmerged value="85.000000"/>                          <!-- Percentage of vehicle submerged when considered 'in water' keep this at 85.0 -->
+        <vecCentreOfMassOffset x="0.000000" y="0.00000" z="0.2000000"/> <!-- Check the vehicle model in OpenIV to check the base center of mass. This modifies it -->
+        <vecInertiaMultiplier x="1.300000" y="1.500000" z="2.00000"/>   <!-- How hard is it for the vehicle to rotate on each axis. Higher = heavier feeling -->
+
+    <!-- Engine & Gearing -->
+        <fDriveBiasFront value="0.000000"/>                             <!-- 1.0 = FWD, 0.0 = RWD. Anything in between is AWD -->
+        <nInitialDriveGears value="5"/>                                 <!-- Original number of gears. Any transmission upgrade adds a single gear to the vehicle -->
+        <fInitialDriveForce value="0.280000"/>                          <!-- Original engine power. Engine upgrades raise this -->
+        <fDriveInertia value="1.000000"/>                               <!-- Engine revving speed. 1.0 may be the maximum, Trucks and big rigs use a lower value -->
+        <fClutchChangeRateScaleUpShift value="1.700000"/>               <!-- Gear changing speed, up. 1.4 is a good standard, Racecars can simulate instant gearchanges with 8.0 -->
+        <fClutchChangeRateScaleDownShift value="1.700000"/>             <!-- Same ^^, gearing down. -->
+        <fInitialDriveMaxFlatVel value="145.000000"/>                   <!-- Original max speed the engine will be able to reach. Engine upgrades raise this, but uphills, airdrag, etc can impede the engine from reaching this speed. -->
+
+    <!-- Brakes -->
+        <fBrakeForce value="0.800000"/>                                 <!-- Strenght of the brakedisk bite. Can lock a wheel, but there are ABS flags below to prevent it. -->
+        <fBrakeBiasFront value="0.650000"/>                             <!-- Distribution of the bite strenght, 0.5 being 50% 50%. 0.65 biases it to the front axles by 0.15, reccomended to account for the weight transfer when braking. -->
+        <fHandBrakeForce value="0.800000"/>                             <!-- Strenght of the brakedisk bite on handbrake, only to the rear axles. -->
+
+    <!-- Wheels -->
+        <fSteeringLock value="40.000000"/>                              <!-- Maximum steering angle. -->
+        <fTractionCurveMax value="2.150000"/>                           <!-- Maximum base grip when the tires are not sliding at all. -->
+        <fTractionCurveMin value="1.750000"/>                           <!-- Minimum base grip at full slide (wheel stopped, car moving fast) -->
+        <fTractionCurveLateral value="22.500000"/>                      <!-- In degrees, angle at which the car wheels will peak in grip when in lateral slide, with a heavy falloff over this sliding angle. -->
+        <fTractionSpringDeltaMax value="0.150000"/>                     <!-- Raises the traction when the axle is compressed, lowers the traction when the axle is decompressed (below its resting position) -->
+        <fLowSpeedTractionLossMult value="1.000000"/>                   <!-- Fake grip loss applied to the wheels at low speeds to allow for easy wheelspin on launch. -->
+        <fCamberStiffnesss value="0.000000"/>                           <!-- This is really hard to explain, its a drifty thing. Talk to Papa Heaf if you tune drift car -->
+        <fTractionBiasFront value="0.500000"/>                          <!-- Distribution of the grip mentioned above. Not reccomended to bias it below 0.35 or 0.75, hovering within 0.4 and 0.6 is reasonable. -->
+        <fTractionLossMult value="1.000000"/>                           <!-- Each game surface has a grip reduction value, multiplied by this value for the tires.  -->
+
+    <!-- Suspension -->
+        <fSuspensionForce value="3.00000"/>                             <!-- Force the suspension applies to the axles up. -->
+        <fSuspensionCompDamp value="1.3000000"/>                        <!-- Force the suspension apples to the axles up when compressing, emulating dampening -->
+        <fSuspensionReboundDamp value="1.300000"/>                      <!-- Force the suspension applies to the axles down when decompressing, emulating rebound dampening -->
+        <fSuspensionUpperLimit value="0.1250000"/>                      <!-- Axles cannot compress over this height. -->
+        <fSuspensionLowerLimit value="-0.150000"/>                      <!-- Axles cannot decompress below this height. -->
+        <fSuspensionRaise value="0.000000"/>                            <!-- Raises the ride height raising the car above the axles. -->
+        <fSuspensionBiasFront value="0.500000"/>                        <!-- Distribution of the suspension strenght. Biased back (<0.5) it would stiffen the back and soften the front. -->
+
+    <!-- Bodyroll related -->
+        <fAntiRollBarForce value="0.800000"/>                           <!-- When suffering lateral bodyroll, this value applies force to the compressed wheel to try and keep it level with the one on the other side. High values impede bodyroll altogether, very high values resulting in weird ultra-antiroll behavior. -->
+        <fAntiRollBarBiasFront value="0.550000"/>                       <!-- Distribution of that force to the front axles, the rest going to the back. -->
+        <fRollCentreHeightFront value="0.100000"/>                      <!-- The front axles' bodyroll pivot height from the ground. When raised, the roll height approaches the CoM height, reducing bodyroll. -->
+        <fRollCentreHeightRear value="0.180000"/>                       <!-- The rear axles' bodyroll pivot height from the ground. When raised, the roll height approaches the CoM height, reducing bodyroll. -->
+
+    <!-- Damage multipliers -->
+        <fCollisionDamageMult value="1.000000"/>                        <!-- Health damage from collisions, multiplies by this. -->
+        <fWeaponDamageMult value="1.000000"/>                           <!-- Health damage from bullets, explosions and other attacks, multiplies by this. -->
+        <fDeformationDamageMult value="0.800000"/>                      <!-- Deformation damage from collisions, multiplies by this. -->
+        <fEngineDamageMult value="1.500000"/>                           <!-- General vehicle damage from any source, multiplies by this -->
+
+    <!-- Other -->
+        <fPetrolTankVolume value="65.000000"/>                          <!-- Defines the default amount of fuel in the vehicle -->
+        <fOilVolume value="5.000000"/>                                  <!-- Defines the default amount of oil in the vehicle -->
+        <fSeatOffsetDistX value="0.000000"/>                            <!-- Defined by model -->
+        <fSeatOffsetDistY value="0.000000"/>                            <!-- Defined by model -->
+        <fSeatOffsetDistZ value="0.000000"/>                            <!-- Defined by model -->
+        <nMonetaryValue value="20000"/>                                 <!-- Singleplayer Value of vehicle in dollars -->
+
+    <!-- Handling Flags -->
+    <strModelFlags>440010</strModelFlags>                               <!-- See Flags section of the google doc -->
+    <strHandlingFlags>0</strHandlingFlags>                              <!-- See Flags section of the google doc -->
+    <strDamageFlags>0</strDamageFlags>                                  <!-- See Flags section of the google doc -->
+    <AIHandling>AVERAGE</AIHandling>                                
+
+    <!-- Sub-Handling Arguments -->
+    <SubHandlingData>                                                   <!-- Use additional <Item> arguments to override/enhance parent handling values above - Minimum 3 arguments, Maximum of 8 arguments -->
+        <Item type="CCarHandlingData">                                  <!-- Defines basic wheel and collision data for the vehicle -->
+          <fBackEndPopUpCarImpulseMult value="0.200000" />              <!-- Not entirely sure -->
+          <fBackEndPopUpBuildingImpulseMult value="0.060000" />         <!-- No clue at all -->
+          <fBackEndPopUpMaxDeltaSpeed value="0.900000" />               <!-- Still no idea -->
+            <fCamberFront value="-0.000000" />                          <!-- Percentage of camber on front wheels - Negative values for that 'stanced' look -->
+            <fCamberRear value="-0.000000" />                           <!-- Same as above but for rear wheels -->
+          <fCamberDistance value="0.560000" />                          <!-- Radial offset angle of camber for wheels relative to collisions - 0.56 is pretty solid in 99% of situations -->
+        </Item>
+        <Item type="NULL" />                                            <!-- Additional <Item> argument for SubHandling Data. 'NULL' is considered a complete argument -->
+        <Item type="NULL" />                                            <!-- Same as above, vehicles require 3 arguments, even if they are 'NULL' -->
+      </SubHandlingData>
+  </Item>
